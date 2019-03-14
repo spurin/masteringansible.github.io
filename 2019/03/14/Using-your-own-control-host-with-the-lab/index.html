@@ -10,10 +10,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Issues,DNS,Control Host">
+        <meta name="keywords" content="DNS,Issues,Control Host">
     
     <meta name="description" content="Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.   It is recommended that you leverage the pro">
-<meta name="keywords" content="Issues,DNS,Control Host">
+<meta name="keywords" content="DNS,Issues,Control Host">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Using your own control host with the lab">
 <meta property="og:url" content="http://masteringansible.com/2019/03/14/Using-your-own-control-host-with-the-lab/index.html">
@@ -21,7 +21,7 @@
 <meta property="og:description" content="Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.   It is recommended that you leverage the pro">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://masteringansible.com/images/pasted-24.png">
-<meta property="og:updated_time" content="2019-03-14T17:33:30.000Z">
+<meta property="og:updated_time" content="2019-03-14T19:19:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Using your own control host with the lab">
 <meta name="twitter:description" content="Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.   It is recommended that you leverage the pro">
@@ -179,9 +179,9 @@
             <p><img src="/images/pasted-24.png" alt="Taking Control"></p>
 <p>Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.  </p>
 <p>It is recommended that you leverage the provided control host for the best experience, however, this post gives some guidance on aspects that need to be considered to see the best from the course, should you decide to create your own.</p>
-<h4 id="Assumed-user-of-packt-for-Section-02-Ansible-Architecture-and-Design-01-Ansible-Inventories"><a href="#Assumed-user-of-packt-for-Section-02-Ansible-Architecture-and-Design-01-Ansible-Inventories" class="headerlink" title="Assumed user of packt for Section 02.  Ansible Architecture and Design, 01. Ansible Inventories"></a>Assumed user of packt for Section 02.  Ansible Architecture and Design, 01. Ansible Inventories</h4><p>In some of the examples used, the playbooks provided in the repo for both the centos and ubuntu hosts directly -</p>
+<h4 id="Assumed-user-of-packt-for-Section-02-Ansible-Architecture-and-Design-01-Ansible-Inventories"><a href="#Assumed-user-of-packt-for-Section-02-Ansible-Architecture-and-Design-01-Ansible-Inventories" class="headerlink" title="Assumed user of packt for Section 02.  Ansible Architecture and Design, 01. Ansible Inventories"></a>Assumed user of packt for Section 02.  Ansible Architecture and Design, 01. Ansible Inventories</h4><p>In some of the examples used, the playbooks provided in the repo for both the centos and ubuntu hosts directly reference the target hostname with no implicit user -</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[centos]</span><br><span class="line">centos1</span><br><span class="line">centos2</span><br><span class="line">centos3</span><br><span class="line"></span><br><span class="line">[ubuntu]</span><br><span class="line">ubuntu1</span><br><span class="line">ubuntu2</span><br><span class="line">ubuntu3</span><br></pre></td></tr></table></figure>
-<p>In the initial sections of Architecture and Design, Ansible Inventories, if you were running this from the supplied control host (ubuntu-c), the user you’d be connecting from would by default be the packt user.  Subsequently, the packt user, exists on all of the target lab hosts.</p>
+<p>In the starter sections of Architecture and Design, Ansible Inventories, if you were running this from the supplied control host (ubuntu-c), the user you’d be connecting from would by default be the packt user.  Subsequently, the packt user, exists on all of the target lab hosts.</p>
 <p>The local user of your own control host is likely to be different and as a result, you’d experience issues with connectivity.</p>
 <p>To mitigate, make the following changes to playbooks, adding ansible_user=packt -</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[centos]</span><br><span class="line">centos1 ansible_user=packt</span><br><span class="line">centos2 ansible_user=packt</span><br><span class="line">centos3 ansible_user=packt</span><br><span class="line"></span><br><span class="line">[ubuntu]</span><br><span class="line">ubuntu1 ansible_user=packt</span><br><span class="line">ubuntu2 ansible_user=packt</span><br><span class="line">ubuntu3 ansible_user=packt</span><br></pre></td></tr></table></figure>
@@ -203,7 +203,7 @@
 
 
 
-    <a data-url="http://masteringansible.com/2019/03/14/Using-your-own-control-host-with-the-lab/" data-id="cjt8yehzw000ltro5nus0ouip" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://masteringansible.com/2019/03/14/Using-your-own-control-host-with-the-lab/" data-id="cjt90r9h9000buoo57yxr9vcm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -275,7 +275,7 @@
         },
         "headline": "Using your own control host with the lab",
         "image": "http://masteringansible.com/images/pasted-24.png",
-        "keywords": "Issues DNS Control Host",
+        "keywords": "DNS Issues Control Host",
         "genre": "",
         "datePublished": "2019-03-14",
         "dateCreated": "2019-03-14",
@@ -284,7 +284,7 @@
         "description": "
 Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.  
 It is recommended that you leverage the pro"
-        "wordCount": 571
+        "wordCount": 579
     }
 </script>
 
