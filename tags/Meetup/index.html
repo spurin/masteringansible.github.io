@@ -6,26 +6,21 @@
     
 
     
-    <title>Using your own control host with the lab | MasteringAnsible.com</title>
+    <title>Tag: Meetup | MasteringAnsible.com</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Issues,Control Host,DNS">
-    
-    <meta name="description" content="Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.   It is recommended that you leverage the pro">
-<meta name="keywords" content="Issues,Control Host,DNS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Using your own control host with the lab">
-<meta property="og:url" content="http://masteringansible.com/2019/03/14/Using-your-own-control-host-with-the-lab/index.html">
+    <meta name="description" content="Official website for the Mastering Ansible online course">
+<meta name="keywords" content="Mastering Ansible">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MasteringAnsible.com">
+<meta property="og:url" content="http://masteringansible.com/tags/Meetup/index.html">
 <meta property="og:site_name" content="MasteringAnsible.com">
-<meta property="og:description" content="Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.   It is recommended that you leverage the pro">
+<meta property="og:description" content="Official website for the Mastering Ansible online course">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://masteringansible.com/images/pasted-35.png">
-<meta property="og:updated_time" content="2019-03-14T20:47:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Using your own control host with the lab">
-<meta name="twitter:description" content="Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.   It is recommended that you leverage the pro">
-<meta name="twitter:image" content="http://masteringansible.com/images/pasted-35.png">
+<meta name="twitter:title" content="MasteringAnsible.com">
+<meta name="twitter:description" content="Official website for the Mastering Ansible online course">
     
 
     
@@ -137,168 +132,65 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <i class="icon fa fa-tag"></i>Tag: <em>Meetup</em>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Using-your-own-control-host-with-the-lab" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2019/03/20/Ansible-London-Meetup-19th-March-2019/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/pasted-36.png)" alt="Ansible London Meetup 19th March 2019" class="thumbnail-image"></span>
+    
+    
+        
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            
+            </div>
+            <div class="date"><time datetime="2019-03-20T17:36:00.000Z" itemprop="datePublished">2019-03-20</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        Using your own control host with the lab
+        <a href="/2019/03/20/Ansible-London-Meetup-19th-March-2019/">Ansible London Meetup 19th March 2019</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2019/03/14/Using-your-own-control-host-with-the-lab/" class="article-date">
-            <time datetime="2019-03-14T20:00:00.000Z" itemprop="datePublished">2019-03-14</time>
-        </a>
+        <p class="article-excerpt">
+            Narrated by James Spurin, @jamesspurin, the views and opinions are my own.  All images in this post including the Sainsbury’s front desk were captured by myself during the event and are free to use, s
+        </p>
     </div>
-
-		
-
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Control-Host/">Control Host</a>, <a class="tag-link" href="/tags/DNS/">DNS</a>, <a class="tag-link" href="/tags/Issues/">Issues</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <p><img src="/images/pasted-35.png" alt></p>
-<p>Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.  </p>
-<p>It is recommended that you leverage the provided control host for the best experience, however, this post gives some guidance on aspects that need to be considered to see the best from the course, should you decide to create your own.</p>
-<h4 id="Assumed-user-of-packt-for-Section-02-Ansible-Architecture-and-Design-01-Ansible-Inventories"><a href="#Assumed-user-of-packt-for-Section-02-Ansible-Architecture-and-Design-01-Ansible-Inventories" class="headerlink" title="Assumed user of packt for Section 02.  Ansible Architecture and Design, 01. Ansible Inventories"></a>Assumed user of packt for Section 02.  Ansible Architecture and Design, 01. Ansible Inventories</h4><p>In some of the examples used, the playbooks provided in the repo for both the centos and ubuntu hosts directly reference the target hostname with no implicit user -</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[centos]</span><br><span class="line">centos1</span><br><span class="line">centos2</span><br><span class="line">centos3</span><br><span class="line"></span><br><span class="line">[ubuntu]</span><br><span class="line">ubuntu1</span><br><span class="line">ubuntu2</span><br><span class="line">ubuntu3</span><br></pre></td></tr></table></figure>
-<p>In the starter sections of Architecture and Design, Ansible Inventories, if you were running this from the supplied control host (ubuntu-c), the user you’d be connecting from would by default be the packt user.  Subsequently, the packt user, exists on all of the target lab hosts.</p>
-<p>The local user of your own control host is likely to be different and as a result, you’d experience issues with connectivity.</p>
-<p>To mitigate, make the following changes to playbooks, adding ansible_user=packt -</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[centos]</span><br><span class="line">centos1 ansible_user=packt</span><br><span class="line">centos2 ansible_user=packt</span><br><span class="line">centos3 ansible_user=packt</span><br><span class="line"></span><br><span class="line">[ubuntu]</span><br><span class="line">ubuntu1 ansible_user=packt</span><br><span class="line">ubuntu2 ansible_user=packt</span><br><span class="line">ubuntu3 ansible_user=packt</span><br></pre></td></tr></table></figure>
-<p>Whilst this can be achieved in a more convenient fashion using vars, this isn’t covered until a later section, hence the approach above is recommended for consistency until familiarity with the different approaches is achieved.</p>
-<p>When progressing through the course, should the hosts file contain a connectivity that assumes a non root user, update the file either directly as above, or via a hosts var directive, i.e. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ubuntu:vars]</span><br><span class="line">ansible_user=packt</span><br></pre></td></tr></table></figure>
-<p>Thanks to Andrew Graham (queglay) for highlighting this issue at <a href="https://github.com/spurin/masteringansible/issues/9" target="_blank" rel="noopener">https://github.com/spurin/masteringansible/issues/9</a></p>
-<h4 id="DNS-Issues"><a href="#DNS-Issues" class="headerlink" title="DNS Issues"></a>DNS Issues</h4><p>The control host supplied with the virtual machine is configured to resolve it’s DNS, from the supplied machine, dnsmasq.</p>
-<p>There’s a few ways of resolving this.  A quick fix, is to set your DNS server temporarily, to that of the dnsmasq resolver at 192.168.0.40, it acts as a generic forwarder for other internet connectivity so shouldn’t affect your online experience, whilst the VM is running.</p>
-<p>Alternatively, if you’re familiar with editing hosts files, you can add entries accordingly on your control host as per the IP details provided in the lab slides.  When doing so, add both the hostname and hostname.masteringansible.com entries for each.</p>
-<p>Again, thanks to Andrew Graham (queglay) for highlighting this issue at <a href="https://github.com/spurin/masteringansible/issues/8" target="_blank" rel="noopener">https://github.com/spurin/masteringansible/issues/8</a></p>
-<h4 id="Nginx-playbook"><a href="#Nginx-playbook" class="headerlink" title="Nginx playbook"></a>Nginx playbook</h4><p>The nginx playbook template was mapped against the nginx configuration of that available on the associated lab instances, i.e. centosx and ubuntux.  The default nginx configuration across the multitude of linux flavours will vary and as a result, this exercise may or may not work effectively in your own environment outside of the lab.</p>
-<p>I suggest for this, either use the lab, or work on changing the templates to meet your local configuration, it shouldn’t be too difficult.  If you do succeed, let me know in the comments and reference your updated templates.</p>
-<p>Thanks to Raj Burnwal (rajkrburnwal) for highlighting this issue at <a href="https://github.com/spurin/masteringansible/issues/6" target="_blank" rel="noopener">https://github.com/spurin/masteringansible/issues/6</a></p>
-
-        </div>
-        <footer class="article-footer">
-            
-
-
-
-    <a data-url="http://masteringansible.com/2019/03/14/Using-your-own-control-host-with-the-lab/" data-id="cjthhtvho000b2vo56xbmpw4w" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
-    </div>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "author": {
-            "@type": "Person",
-            "name": "James Spurin"
-        },
-        "headline": "Using your own control host with the lab",
-        "image": "http://masteringansible.com/images/pasted-35.png",
-        "keywords": "Issues Control Host DNS",
-        "genre": "",
-        "datePublished": "2019-03-14",
-        "dateCreated": "2019-03-14",
-        "dateModified": "2019-03-14",
-        "url": "http://masteringansible.com/2019/03/14/Using-your-own-control-host-with-the-lab/",
-        "description": "
-Whilst a control host for Ansible is provided with the course, i.e. the Virtual Machine called ubuntu-c, some prefer to configure their own control host.  
-It is recommended that you leverage the pro"
-        "wordCount": 578
-    }
-</script>
-
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
 
 
 
@@ -352,29 +244,6 @@ It is recommended that you leverage the pro"
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2019/03/14/Celebrating-3000-Students-at-Udemy/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Celebrating 3000+ Students at Udemy
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2019/03/14/Update-Virtual-Machine-Images/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Update: Virtual Machine Images</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -576,13 +445,11 @@ It is recommended that you leverage the pro"
     var disqus_shortname = 'spurin';
     
     
-    var disqus_url = 'http://masteringansible.com/2019/03/14/Using-your-own-control-host-with-the-lab/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
